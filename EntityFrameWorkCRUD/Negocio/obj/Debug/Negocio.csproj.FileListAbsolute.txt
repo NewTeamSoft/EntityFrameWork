@@ -1,0 +1,6 @@
+D:\Datos DevSoft Group\Proyectos C#\EntityFrameWorkCRUD\Negocio\bin\Debug\Negocio.dll.config
+D:\Datos DevSoft Group\Proyectos C#\EntityFrameWorkCRUD\Negocio\bin\Debug\Negocio.dll
+D:\Datos DevSoft Group\Proyectos C#\EntityFrameWorkCRUD\Negocio\bin\Debug\Negocio.pdb
+D:\Datos DevSoft Group\Proyectos C#\EntityFrameWorkCRUD\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+D:\Datos DevSoft Group\Proyectos C#\EntityFrameWorkCRUD\Negocio\obj\Debug\Negocio.dll
+D:\Datos DevSoft Group\Proyectos C#\EntityFrameWorkCRUD\Negocio\obj\Debug\Negocio.pdb

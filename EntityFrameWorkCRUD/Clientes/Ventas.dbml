@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Ventas" Class="VentasDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=Ventas;Integrated Security=True" SettingsObjectName="Clientes.Properties.Settings" SettingsPropertyName="VentasConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Clientes" Member="Clientes">
+    <Type Name="Cliente">
+      <Column Name="ClienteID" Type="System.String" DbType="Char(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Dni" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="Edad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sexo" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Telefono" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.uspBuscarCliente" Method="uspBuscarCliente">
+    <Parameter Name="ClienteID" Parameter="clienteID" Type="System.String" DbType="Char(4)" />
+    <Parameter Name="Mensaje" Parameter="mensaje" Type="System.String" DbType="VarChar(50)" Direction="InOut" />
+    <ElementType Name="uspBuscarClienteResult">
+      <Column Name="ClienteID" Type="System.String" DbType="Char(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Dni" Type="System.String" DbType="Char(8)" CanBeNull="true" />
+      <Column Name="Edad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sexo" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Telefono" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.uspEliminarCliente" Method="uspEliminarCliente">
+    <Parameter Name="ClienteID" Parameter="clienteID" Type="System.String" DbType="Char(4)" />
+    <Parameter Name="Mensaje" Parameter="mensaje" Type="System.String" DbType="VarChar(50)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.uspModificarClientes" Method="uspModificarClientes">
+    <Parameter Name="ClienteID" Parameter="clienteID" Type="System.String" DbType="Char(4)" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="Dni" Parameter="dni" Type="System.String" DbType="Char(8)" />
+    <Parameter Name="Edad" Parameter="edad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Sexo" Parameter="sexo" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="Telefono" Parameter="telefono" Type="System.String" DbType="Char(9)" />
+    <Parameter Name="Mensaje" Parameter="mensaje" Type="System.String" DbType="VarChar(50)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.uspRegistrarClientes" Method="uspRegistrarClientes">
+    <Parameter Name="ClienteID" Parameter="clienteID" Type="System.String" DbType="Char(4)" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Dni" Parameter="dni" Type="System.String" DbType="Char(8)" />
+    <Parameter Name="Edad" Parameter="edad" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Sexo" Parameter="sexo" Type="System.Char" DbType="Char(1)" />
+    <Parameter Name="Telefono" Parameter="telefono" Type="System.String" DbType="Char(9)" />
+    <Parameter Name="Mensaje" Parameter="mensaje" Type="System.String" DbType="VarChar(50)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

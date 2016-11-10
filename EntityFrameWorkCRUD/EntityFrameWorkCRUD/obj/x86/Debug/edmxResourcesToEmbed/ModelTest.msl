@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_PresidentesModelStoreContainer" CdmEntityContainer="DB_PresidentesEntities">
+    <EntitySetMapping Name="Presidentes">
+      <EntityTypeMapping TypeName="DB_PresidentesModel.Presidentes">
+        <MappingFragment StoreEntitySet="Presidentes">
+          <ScalarProperty Name="PRE_codigo" ColumnName="PRE_codigo" />
+          <ScalarProperty Name="PRE_nombre" ColumnName="PRE_nombre" />
+          <ScalarProperty Name="PRE_apellidos" ColumnName="PRE_apellidos" />
+          <ScalarProperty Name="PRE_partido" ColumnName="PRE_partido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

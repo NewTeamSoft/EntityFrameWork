@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Inventario.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="InventarioStoreContainer">
+    <EntitySet Name="Proveedor" EntityType="Inventario.Store.Proveedor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Producto" EntityType="Inventario.Store.Producto" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ProveedorProducto" Association="Inventario.Store.ProveedorProducto">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="Producto" EntitySet="Producto" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Proveedor">
+    <Key>
+      <PropertyRef Name="ProveedorID" />
+    </Key>
+    <Property Name="ProveedorID" Type="int" Nullable="false" />
+    <Property Name="ProveedorNombre" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ProveedorDireccion" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="ProveedorTelefono" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="ProveedorCorreoE" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="ProductoID" />
+    </Key>
+    <Property Name="ProductoID" Type="int" Nullable="false" />
+    <Property Name="ProductoNombre" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ProductoPrecio" Type="decimal" Nullable="false" Precision="5" />
+    <Property Name="ProductoDescripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ProductoProveedor" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="ProveedorProducto">
+    <End Role="Proveedor" Type="Inventario.Store.Proveedor" Multiplicity="1" />
+    <End Role="Producto" Type="Inventario.Store.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="ProveedorID" />
+      </Principal>
+      <Dependent Role="Producto">
+        <PropertyRef Name="ProductoProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

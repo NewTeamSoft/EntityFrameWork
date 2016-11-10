@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UsuarioDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tablaUsuarios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="primerNombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="segundoNombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="cedula" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="sexo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="direccion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="fechaNacimiento" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="imagen" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="primerApellido" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="segundoApellido" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="UsuarioDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tablaUsuarios" EntityType="Self.tablaUsuarios" />
+    <FunctionImport Name="uspBuscarRegistros" ReturnType="Collection(UsuarioDBModel.uspBuscarRegistros_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="primerNombre" Mode="In" Type="String" />
+      <Parameter Name="segundoNombre" Mode="In" Type="String" />
+      <Parameter Name="primerApellido" Mode="In" Type="String" />
+      <Parameter Name="segundoApellido" Mode="In" Type="String" />
+      <Parameter Name="cedula" Mode="In" Type="String" />
+      <Parameter Name="sexo" Mode="In" Type="String" />
+      <Parameter Name="fechaNacimiento" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="uspDeleteUsuarios">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="uspInsertUsuarios">
+      <Parameter Name="primerNombre" Mode="In" Type="String" />
+      <Parameter Name="SegundoNombre" Mode="In" Type="String" />
+      <Parameter Name="cedula" Mode="In" Type="String" />
+      <Parameter Name="sexo" Mode="In" Type="String" />
+      <Parameter Name="direccion" Mode="In" Type="String" />
+      <Parameter Name="fechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="imagen" Mode="In" Type="String" />
+      <Parameter Name="primerApellido" Mode="In" Type="String" />
+      <Parameter Name="segundoApellido" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="uspSelecUsuarios" ReturnType="Collection(UsuarioDBModel.uspSelecUsuarios_Result)" />
+    <FunctionImport Name="uspUpdateUsuario">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="primerNombre" Mode="In" Type="String" />
+      <Parameter Name="segundoNombre" Mode="In" Type="String" />
+      <Parameter Name="cedula" Mode="In" Type="String" />
+      <Parameter Name="sexo" Mode="In" Type="String" />
+      <Parameter Name="direccion" Mode="In" Type="String" />
+      <Parameter Name="fechaNacimiento" Mode="In" Type="DateTime" />
+      <Parameter Name="imagen" Mode="In" Type="String" />
+      <Parameter Name="primerApellido" Mode="In" Type="String" />
+      <Parameter Name="segundoApellido" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="uspBuscarRegistros_Result">
+    <Property Type="Int32" Name="id" Nullable="false" />
+    <Property Type="String" Name="primerNombre" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="segundoNombre" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="primerApellido" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="segundoApellido" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="cedula" Nullable="true" MaxLength="14" />
+    <Property Type="String" Name="sexo" Nullable="true" MaxLength="1" />
+    <Property Type="DateTime" Name="fechaNacimiento" Nullable="false" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="uspSelecUsuarios_Result">
+    <Property Type="Int32" Name="Codigo" Nullable="false" />
+    <Property Type="String" Name="Primer_nombre" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="Segundo_nombre" Nullable="true" MaxLength="25" />
+    <Property Type="String" Name="Apellido_parterno" Nullable="false" MaxLength="25" />
+    <Property Type="String" Name="Apellido_materno" Nullable="true" MaxLength="25" />
+    <Property Type="DateTime" Name="Fecha_de_nacimiento" Nullable="false" Precision="23" />
+    <Property Type="String" Name="Cedula" Nullable="true" MaxLength="14" />
+    <Property Type="String" Name="Sexo" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="Direccion" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="imagen" Nullable="true" />
+  </ComplexType>
+</Schema>

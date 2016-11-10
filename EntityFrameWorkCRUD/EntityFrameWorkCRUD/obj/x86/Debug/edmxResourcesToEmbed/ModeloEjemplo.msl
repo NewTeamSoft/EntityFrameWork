@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UsuarioDBModelStoreContainer" CdmEntityContainer="UsuarioDBEntities">
+    <EntitySetMapping Name="tablaUsuarios">
+      <EntityTypeMapping TypeName="UsuarioDBModel.tablaUsuarios">
+        <MappingFragment StoreEntitySet="tablaUsuarios">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="primerNombre" ColumnName="primerNombre" />
+          <ScalarProperty Name="segundoNombre" ColumnName="segundoNombre" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+          <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
+          <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="uspBuscarRegistros" FunctionName="UsuarioDBModel.Store.uspBuscarRegistros">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UsuarioDBModel.uspBuscarRegistros_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="primerNombre" ColumnName="primerNombre" />
+          <ScalarProperty Name="segundoNombre" ColumnName="segundoNombre" />
+          <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
+          <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="sexo" ColumnName="sexo" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspDeleteUsuarios" FunctionName="UsuarioDBModel.Store.uspDeleteUsuarios" />
+    <FunctionImportMapping FunctionImportName="uspInsertUsuarios" FunctionName="UsuarioDBModel.Store.uspInsertUsuarios" />
+    <FunctionImportMapping FunctionImportName="uspSelecUsuarios" FunctionName="UsuarioDBModel.Store.uspSelecUsuarios">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UsuarioDBModel.uspSelecUsuarios_Result">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Primer_nombre" ColumnName="Primer nombre" />
+          <ScalarProperty Name="Segundo_nombre" ColumnName="Segundo nombre" />
+          <ScalarProperty Name="Apellido_parterno" ColumnName="Apellido parterno" />
+          <ScalarProperty Name="Apellido_materno" ColumnName="Apellido materno" />
+          <ScalarProperty Name="Fecha_de_nacimiento" ColumnName="Fecha de nacimiento" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="imagen" ColumnName="imagen" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="uspUpdateUsuario" FunctionName="UsuarioDBModel.Store.uspUpdateUsuario" />
+  </EntityContainerMapping>
+</Mapping>

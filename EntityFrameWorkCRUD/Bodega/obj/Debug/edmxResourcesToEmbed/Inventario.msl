@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="InventarioStoreContainer" CdmEntityContainer="InventarioContainer">
+    <EntitySetMapping Name="Proveedor">
+      <EntityTypeMapping TypeName="IsTypeOf(Inventario.Proveedor)">
+        <MappingFragment StoreEntitySet="Proveedor">
+          <ScalarProperty Name="ProveedorID" ColumnName="ProveedorID" />
+          <ScalarProperty Name="ProveedorNombre" ColumnName="ProveedorNombre" />
+          <ScalarProperty Name="ProveedorDireccion" ColumnName="ProveedorDireccion" />
+          <ScalarProperty Name="ProveedorTelefono" ColumnName="ProveedorTelefono" />
+          <ScalarProperty Name="ProveedorCorreoE" ColumnName="ProveedorCorreoE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producto">
+      <EntityTypeMapping TypeName="IsTypeOf(Inventario.Producto)">
+        <MappingFragment StoreEntitySet="Producto">
+          <ScalarProperty Name="ProductoID" ColumnName="ProductoID" />
+          <ScalarProperty Name="ProductoNombre" ColumnName="ProductoNombre" />
+          <ScalarProperty Name="ProductoPrecio" ColumnName="ProductoPrecio" />
+          <ScalarProperty Name="ProductoDescripcion" ColumnName="ProductoDescripcion" />
+          <ScalarProperty Name="ProductoProveedor" ColumnName="ProductoProveedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

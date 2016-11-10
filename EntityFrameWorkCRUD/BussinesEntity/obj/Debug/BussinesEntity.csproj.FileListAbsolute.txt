@@ -1,0 +1,5 @@
+D:\Datos DevSoft Group\Proyectos C#\EntityFrameWorkCRUD\BussinesEntity\bin\Debug\BussinesEntity.dll
+D:\Datos DevSoft Group\Proyectos C#\EntityFrameWorkCRUD\BussinesEntity\bin\Debug\BussinesEntity.pdb
+D:\Datos DevSoft Group\Proyectos C#\EntityFrameWorkCRUD\BussinesEntity\obj\Debug\BussinesEntity.csprojResolveAssemblyReference.cache
+D:\Datos DevSoft Group\Proyectos C#\EntityFrameWorkCRUD\BussinesEntity\obj\Debug\BussinesEntity.dll
+D:\Datos DevSoft Group\Proyectos C#\EntityFrameWorkCRUD\BussinesEntity\obj\Debug\BussinesEntity.pdb

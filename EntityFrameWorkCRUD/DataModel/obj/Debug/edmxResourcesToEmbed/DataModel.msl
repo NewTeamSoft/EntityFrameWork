@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PersonaDBModelStoreContainer" CdmEntityContainer="PersonaDBEntities">
+    <EntitySetMapping Name="Alumno">
+      <EntityTypeMapping TypeName="PersonaDBModel.Alumno">
+        <MappingFragment StoreEntitySet="Alumno">
+          <ScalarProperty Name="i_IdPersona" ColumnName="i_IdPersona" />
+          <ScalarProperty Name="v_NombresApellidos" ColumnName="v_NombresApellidos" />
+          <ScalarProperty Name="v_DNI" ColumnName="v_DNI" />
+          <ScalarProperty Name="v_Direccion" ColumnName="v_Direccion" />
+          <ScalarProperty Name="t_FechaNacimiento" ColumnName="t_FechaNacimiento" />
+          <ScalarProperty Name="v_Telefono" ColumnName="v_Telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

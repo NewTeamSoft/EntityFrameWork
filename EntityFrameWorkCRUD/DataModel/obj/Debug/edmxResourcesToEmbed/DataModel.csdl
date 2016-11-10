@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PersonaDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Alumno">
+    <Key>
+      <PropertyRef Name="i_IdPersona" />
+    </Key>
+    <Property Name="i_IdPersona" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="v_NombresApellidos" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="v_DNI" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Name="v_Direccion" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="t_FechaNacimiento" Type="DateTime" Precision="3" />
+    <Property Name="v_Telefono" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="PersonaDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Alumno" EntityType="Self.Alumno" />
+  </EntityContainer>
+</Schema>

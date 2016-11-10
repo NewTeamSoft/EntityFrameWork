@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Inventario" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="InventarioContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Proveedor" EntityType="Inventario.Proveedor" />
+    <EntitySet Name="Producto" EntityType="Inventario.Producto" />
+    <AssociationSet Name="ProveedorProducto" Association="Inventario.ProveedorProducto">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="Producto" EntitySet="Producto" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Proveedor">
+    <Key>
+      <PropertyRef Name="ProveedorID" />
+    </Key>
+    <Property Name="ProveedorID" Type="Int32" annotation:StoreGeneratedPattern="None" Nullable="false" />
+    <Property Name="ProveedorNombre" Type="String" MaxLength="50" Nullable="false" />
+    <Property Name="ProveedorDireccion" Type="String" MaxLength="100" Nullable="false" />
+    <Property Name="ProveedorTelefono" Type="String" MaxLength="20" Nullable="false" />
+    <Property Name="ProveedorCorreoE" Type="String" MaxLength="50" Nullable="false" />
+    <NavigationProperty Name="Producto" Relationship="Inventario.ProveedorProducto" FromRole="Proveedor" ToRole="Producto" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="ProductoID" />
+    </Key>
+    <Property Name="ProductoID" Type="Int32" annotation:StoreGeneratedPattern="None" Nullable="false" />
+    <Property Name="ProductoNombre" Type="String" MaxLength="50" Nullable="false" />
+    <Property Name="ProductoPrecio" Type="Decimal" Precision="5" Nullable="false" />
+    <Property Name="ProductoDescripcion" Type="String" Nullable="false" />
+    <Property Name="ProductoProveedor" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Proveedor" Relationship="Inventario.ProveedorProducto" FromRole="Producto" ToRole="Proveedor" />
+  </EntityType>
+  <Association Name="ProveedorProducto">
+    <End Type="Inventario.Proveedor" Role="Proveedor" Multiplicity="1" />
+    <End Type="Inventario.Producto" Role="Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="ProveedorID" />
+      </Principal>
+      <Dependent Role="Producto">
+        <PropertyRef Name="ProductoProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

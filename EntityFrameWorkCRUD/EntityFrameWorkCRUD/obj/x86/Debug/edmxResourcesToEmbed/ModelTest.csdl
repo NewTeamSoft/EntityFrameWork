@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_PresidentesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Presidentes">
+    <Key>
+      <PropertyRef Name="PRE_codigo" />
+    </Key>
+    <Property Name="PRE_codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PRE_nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PRE_apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PRE_partido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="DB_PresidentesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Presidentes" EntityType="Self.Presidentes" />
+  </EntityContainer>
+</Schema>

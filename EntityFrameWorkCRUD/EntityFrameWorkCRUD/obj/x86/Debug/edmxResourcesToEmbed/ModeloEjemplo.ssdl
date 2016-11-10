@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UsuarioDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tablaUsuarios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="primerNombre" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="segundoNombre" Type="varchar" MaxLength="25" />
+    <Property Name="cedula" Type="varchar" MaxLength="14" />
+    <Property Name="sexo" Type="char" MaxLength="1" />
+    <Property Name="direccion" Type="varchar" MaxLength="255" />
+    <Property Name="fechaNacimiento" Type="datetime" Nullable="false" />
+    <Property Name="imagen" Type="varchar(max)" />
+    <Property Name="primerApellido" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="segundoApellido" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <Function Name="uspBuscarRegistros" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="primerNombre" Type="varchar" Mode="In" />
+    <Parameter Name="segundoNombre" Type="varchar" Mode="In" />
+    <Parameter Name="primerApellido" Type="varchar" Mode="In" />
+    <Parameter Name="segundoApellido" Type="varchar" Mode="In" />
+    <Parameter Name="cedula" Type="varchar" Mode="In" />
+    <Parameter Name="sexo" Type="char" Mode="In" />
+    <Parameter Name="fechaNacimiento" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="uspDeleteUsuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="uspInsertUsuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="primerNombre" Type="varchar" Mode="In" />
+    <Parameter Name="SegundoNombre" Type="varchar" Mode="In" />
+    <Parameter Name="cedula" Type="varchar" Mode="In" />
+    <Parameter Name="sexo" Type="char" Mode="In" />
+    <Parameter Name="direccion" Type="varchar" Mode="In" />
+    <Parameter Name="fechaNacimiento" Type="datetime" Mode="In" />
+    <Parameter Name="imagen" Type="varchar(max)" Mode="In" />
+    <Parameter Name="primerApellido" Type="varchar" Mode="In" />
+    <Parameter Name="segundoApellido" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="uspSelecUsuarios" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="uspUpdateUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="primerNombre" Type="varchar" Mode="In" />
+    <Parameter Name="segundoNombre" Type="varchar" Mode="In" />
+    <Parameter Name="cedula" Type="varchar" Mode="In" />
+    <Parameter Name="sexo" Type="char" Mode="In" />
+    <Parameter Name="direccion" Type="varchar" Mode="In" />
+    <Parameter Name="fechaNacimiento" Type="datetime" Mode="In" />
+    <Parameter Name="imagen" Type="varchar(max)" Mode="In" />
+    <Parameter Name="primerApellido" Type="varchar" Mode="In" />
+    <Parameter Name="segundoApellido" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="UsuarioDBModelStoreContainer">
+    <EntitySet Name="tablaUsuarios" EntityType="Self.tablaUsuarios" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
