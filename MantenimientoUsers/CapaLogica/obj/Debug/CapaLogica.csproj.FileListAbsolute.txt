@@ -1,0 +1,9 @@
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\CapaLogica\obj\Debug\CapaLogica.csprojResolveAssemblyReference.cache
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\CapaLogica\bin\Debug\CapaDato.dll
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\CapaLogica\bin\Debug\CapaEntidad.dll
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\CapaLogica\bin\Debug\CapaDato.pdb
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\CapaLogica\bin\Debug\CapaEntidad.pdb

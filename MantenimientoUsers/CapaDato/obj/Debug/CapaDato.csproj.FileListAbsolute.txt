@@ -1,0 +1,7 @@
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\CapaDato\bin\Debug\CapaDato.dll
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\CapaDato\bin\Debug\CapaDato.pdb
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\CapaDato\bin\Debug\CapaEntidad.dll
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\CapaDato\bin\Debug\CapaEntidad.pdb
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\CapaDato\obj\Debug\CapaDato.csprojResolveAssemblyReference.cache
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\CapaDato\obj\Debug\CapaDato.dll
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\CapaDato\obj\Debug\CapaDato.pdb

@@ -1,0 +1,15 @@
+c:\users\jose luis florian\documents\visual studio 2015\Projects\MantenimientoUsers\MantenimientoUsers\bin\Debug\MantenimientoUsers.exe.config
+c:\users\jose luis florian\documents\visual studio 2015\Projects\MantenimientoUsers\MantenimientoUsers\bin\Debug\MantenimientoUsers.exe
+c:\users\jose luis florian\documents\visual studio 2015\Projects\MantenimientoUsers\MantenimientoUsers\bin\Debug\MantenimientoUsers.pdb
+c:\users\jose luis florian\documents\visual studio 2015\Projects\MantenimientoUsers\MantenimientoUsers\obj\Debug\MantenimientoUsers.csprojResolveAssemblyReference.cache
+c:\users\jose luis florian\documents\visual studio 2015\Projects\MantenimientoUsers\MantenimientoUsers\obj\Debug\MantenimientoUsers.Form1.resources
+c:\users\jose luis florian\documents\visual studio 2015\Projects\MantenimientoUsers\MantenimientoUsers\obj\Debug\MantenimientoUsers.Properties.Resources.resources
+c:\users\jose luis florian\documents\visual studio 2015\Projects\MantenimientoUsers\MantenimientoUsers\obj\Debug\MantenimientoUsers.csproj.GenerateResource.Cache
+c:\users\jose luis florian\documents\visual studio 2015\Projects\MantenimientoUsers\MantenimientoUsers\obj\Debug\MantenimientoUsers.exe
+c:\users\jose luis florian\documents\visual studio 2015\Projects\MantenimientoUsers\MantenimientoUsers\obj\Debug\MantenimientoUsers.pdb
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\MantenimientoUsers\bin\Debug\CapaEntidad.dll
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\MantenimientoUsers\bin\Debug\CapaLogica.dll
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\MantenimientoUsers\bin\Debug\CapaEntidad.pdb
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\MantenimientoUsers\bin\Debug\CapaLogica.pdb
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\MantenimientoUsers\bin\Debug\CapaDato.dll
+C:\Users\Jose Luis Florian\Documents\Visual Studio 2015\Projects\MantenimientoUsers\MantenimientoUsers\bin\Debug\CapaDato.pdb
